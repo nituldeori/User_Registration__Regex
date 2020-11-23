@@ -8,7 +8,10 @@ public class UserRegistration {
 	    String FirstName=sc.nextLine();
 	    System.out.println("Enter the Last Name: ");
 	    String LastName=sc.nextLine();
+	    System.out.println("Enter the Email ID: ");
+	    String EmailId=sc.nextLine();
 	    String regexForName="[A-Z]{1}[a-z]{2,}";
+	    String regexForEmail="^[a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})$";
 	    if(Pattern.matches(regexForName, FirstName)) {
 		    System.out.println("Valid First Name");
 	    }
@@ -20,7 +23,13 @@ public class UserRegistration {
 	    else
 		    System.out.println("Invalid Last Name");
 	    sc.close();
+	    if(Pattern.matches(regexForEmail, EmailId)) {
+		    System.out.println("Valid Email Id");
 	    }
+	    else
+		    System.out.println("Invalid Email Id");
+	    }
+	    
 	
 
 }
