@@ -12,9 +12,12 @@ public class UserRegistration {
 	    String EmailId=sc.nextLine();
 	    System.out.println("Enter the phone number");
 	    String PhoneNumber=sc.nextLine();
+	    System.out.println("Enter the password: ");
+	    String Password=sc.nextLine();
 	    String regexForName="[A-Z]{1}[a-z]{2,}";
 	    String regexForEmail="^[a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$";
 	    String regexForPhoneNo="[91 ]{3}[6-9][0-9]{9}";
+	    String regexForPassword="[A-Za-z0-9]{8,}";
 	    if(Pattern.matches(regexForName, FirstName)) {
 		    System.out.println("Valid First Name");
 	    }
@@ -36,6 +39,11 @@ public class UserRegistration {
 	    }
 	    else
 		    System.out.println("Invalid Phone Number");
+	    if(Pattern.matches(regexForPassword, Password)) {
+		    System.out.println("Valid Password");
+	    }
+	    else
+		    System.out.println("Invalid Password");
 	    }
 	    
 	
