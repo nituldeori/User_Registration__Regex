@@ -13,7 +13,7 @@ public class UserRegistration {
 	    System.out.println("Enter the phone number");
 	    String PhoneNumber=sc.nextLine();
 	    String regexForName="[A-Z]{1}[a-z]{2,}";
-	    String regexForEmail="^[a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})$";
+	    String regexForEmail="^[a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$";
 	    String regexForPhoneNo="[91 ]{3}[6-9][0-9]{9}";
 	    if(Pattern.matches(regexForName, FirstName)) {
 		    System.out.println("Valid First Name");
